@@ -1,0 +1,6 @@
+<h2>Welcome!</h2>
+<p>Пожалуйста выберите товар) </p>
+<div *ngFor="let p of getProducts()" >
+    <app-product [product] = "p"></app-product>
+    <button (click)="onBuy(p)">buy</button>
+</div>

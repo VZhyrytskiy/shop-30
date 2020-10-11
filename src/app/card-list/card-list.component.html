@@ -1,0 +1,9 @@
+<p>В корзине:</p>
+
+<p *ngIf="getBuyList()?.length == 0"> Наберите нас, с удовольствием Вам поможем совершить покупку) </p>
+
+<div *ngFor="let p of getBuyList()" >
+    <app-product [product] = "p"></app-product>
+</div>
+<p>Подтвердите выбор</p>
+<button (click)="onConfirm()">Confirm</button>
