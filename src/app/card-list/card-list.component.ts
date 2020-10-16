@@ -19,7 +19,7 @@ export class CardListComponent implements OnInit {
 
   onConfirm() {
     console.log('Вы купили:');
-    for (var product of this.cartService.getBuyList()) {
+    for (const product of this.cartService.getBuyList()) {
       console.log(product);
     }
     console.log('Чистим корзину)');

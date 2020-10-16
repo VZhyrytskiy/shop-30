@@ -11,13 +11,13 @@ export class ProductComponent implements OnInit {
 
   constructor() { }
 
+  @Input()  product: Product;
+
   ngOnInit(): void {
   }
 
-  @Input()  product: Product;
+  getTextCategory(id: number) {
 
-  getTextCategory(id:number) {
-      
     return Category[id];
   }
 

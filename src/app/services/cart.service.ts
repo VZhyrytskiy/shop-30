@@ -6,7 +6,7 @@ import { Product } from '../model/product';
 })
 export class CartService {
 
-  products = new Array<Product>()
+  products = new Array<Product>();
 
   constructor() { }
 
@@ -15,10 +15,12 @@ export class CartService {
   }
 
   addToBuyList(product: Product){
+    // тут мутация данных
     this.products.push(product);
   }
 
   cleanCart(){
-    this.products = new Array<Product>()
+    // а тут новая ссылка, желательно придерживаться одного подхода
+    this.products = new Array<Product>();
   }
 }
